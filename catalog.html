@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Сервисный центр офисная техника</title>
+    <!-- Подключение Bootstrap и иконок -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Top Header -->
+    <div class="top-header py-3 bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid container d-flex align-items-center justify-content-between">
+          <a class="navbar-brand" href="http://sc-dv.test.local/">
+            <img src="img/Offt - logo - black.svg" alt="Офисная техника" width="140" height="35" />
+          </a>
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">О нас</a>
+              <ul class="dropdown-menu unified-dropdown" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="#">Контакты и график работы</a></li>
+                <li><a class="dropdown-item" href="#">Аренда оборудования</a></li>
+                <li><a class="dropdown-item" href="#">Доставка</a></li>
+                <li><a class="dropdown-item" href="#">Условия</a></li>
+                <li><a class="dropdown-item" href="#">Цены</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Цены</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Сертификаты</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Акции</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-clock-history me-1"></i> Статус заказа
+              </a>
+            </li>
+          </ul>
+          <div class="d-flex gap-2">
+            <button class="btn btn-yellow btn-custom me-3">
+              <i class="bi bi-telephone-forward me-1"></i> Связаться
+            </button>
+            <div class="dropdown">
+              <button class="btn btn-yellow btn-custom dropdown" type="button" id="loginDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                <i class="bi bi-person-check-fill"></i> Личный кабинет
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end unified-dropdown login-dropdown" aria-labelledby="loginDropdown">
+                <li>
+                  <form>
+                    <h5 class="mb-3 text-center">Вход в аккаунт</h5>
+                    <div class="mb-3">
+                      <label for="loginEmail" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="loginEmail" placeholder="Введите ваш email" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="loginPassword" class="form-label">Пароль</label>
+                      <input type="password" class="form-control" id="loginPassword" placeholder="Введите пароль" />
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="rememberMe">
+                      <label for="rememberMe" class="form-check-label" onclick="event.stopPropagation();">
+                        Запомнить меня
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-yellow btn-custom w-100 mb-2">Войти</button>
+                    <div class="d-flex justify-content-between">
+                      <a href="#" class="small">Забыли пароль?</a>
+                      <a href="#" class="small">Регистрация</a>
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Fixed Header -->
+    <div class="fixed-header">
+      <nav class="navbar py-3">
+        <div class="container-fluid container d-flex align-items-center">
+          <!-- Услуги -->
+          <div class="dropdown me-4">
+            <button class="btn btn-yellow btn-custom dropdown-toggle" type="button" id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              Услуги
+            </button>
+            <ul class="dropdown-menu unified-dropdown" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="#">Ремонт принтеров</a></li>
+              <li><a class="dropdown-item" href="#">Ремонт МФУ</a></li>
+              <li><a class="dropdown-item" href="#">Ремонт ПК</a></li>
+              <li><a class="dropdown-item" href="#">Ремонт ноутбуков</a></li>
+              <li><a class="dropdown-item" href="#">Ремонт проекторов</a></li>
+              <li><a class="dropdown-item" href="#">Ремонт ИБП</a></li>
+              <li><a class="dropdown-item" href="#">Заправка картриджей</a></li>
+              <li><a class="dropdown-item" href="#">Установка видеонаблюдение</a></li>
+              <li><a class="dropdown-item" href="#">Установка и монтаж СКС</a></li>
+              <li><a class="dropdown-item" href="#">Аренда оборудования</a></li>
+              <li><a class="dropdown-item" href="#">Абонентское обслуживание</a></li>
+            </ul>
+          </div>
+          <!-- Каталог -->
+          <div class="dropdown me-3">
+            <button class="btn btn-yellow btn-custom dropdown-toggle" type="button" id="catalogDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              Каталог
+            </button>
+            <div class="dropdown-menu p-0" aria-labelledby="catalogDropdown">
+              <div class="catalog-dropdown-container">
+                <!-- Левая колонка: корневое меню -->
+                <div class="catalog-menu-main">
+                  <div class="catalog-menu__root-item active" data-category="zapascnye">
+                    <a href="/catalog.html" class="catalog-menu__link-wrapper">
+                      <i class="bi bi-box-seam catalog-menu__icon"></i>
+                      <span class="catalog-menu__title">Запасные части</span>
+                    </a>
+                  </div>
+                  <div class="catalog-menu__root-item" data-category="istochniki">
+                    <a href="/catalog/istochniki/" class="catalog-menu__link-wrapper">
+                      <i class="bi bi-lightning-charge catalog-menu__icon"></i>
+                      <span class="catalog-menu__title">Источники питания</span>
+                    </a>
+                  </div>
+                  <div class="catalog-menu__root-item" data-category="radiodetali">
+                    <a href="/catalog/radiodetali/" class="catalog-menu__link-wrapper">
+                      <i class="bi bi-speedometer2 catalog-menu__icon"></i>
+                      <span class="catalog-menu__title">Радиодетали</span>
+                    </a>
+                  </div>
+                  <div class="catalog-menu__root-item" data-category="instrumenty">
+                    <a href="/catalog/instrumenty/" class="catalog-menu__link-wrapper">
+                      <i class="bi bi-tools catalog-menu__icon"></i>
+                      <span class="catalog-menu__title">Инструменты</span>
+                    </a>
+                  </div>
+                  <div class="catalog-menu__root-item" data-category="himia">
+                    <a href="/catalog/himia/" class="catalog-menu__link-wrapper">
+                      <i class="bi bi-box2-heart-fill catalog-menu__icon"></i>
+                      <span class="catalog-menu__title">Химия</span>
+                    </a>
+                  </div>
+                  <div class="catalog-menu__root-item" data-category="raskhodnye">
+                    <a href="/catalog/raskhodnye/" class="catalog-menu__link-wrapper">
+                      <i class="bi bi-card-checklist catalog-menu__icon"></i>
+                      <span class="catalog-menu__title">Расходные материалы</span>
+                    </a>
+                  </div>
+                  <div class="catalog-menu__root-item" data-category="kabeli">
+                    <a href="/catalog/kabeli-i-perehodniki/" class="catalog-menu__link-wrapper">
+                      <i class="bi bi-plug catalog-menu__icon"></i>
+                      <span class="catalog-menu__title">Кабели и переходники</span>
+                    </a>
+                  </div>
+                  <div class="catalog-menu__root-item" data-category="prochee">
+                    <a href="/catalog/prochee/" class="catalog-menu__link-wrapper">
+                      <i class="bi bi-three-dots-vertical catalog-menu__icon"></i>
+                      <span class="catalog-menu__title">Прочее</span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Правая колонка: динамическое подменю -->
+                <div class="catalog-menu-submenu" id="catalog-submenu"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Поиск -->
+          <form class="d-flex flex-grow-1 me-4">
+            <div class="input-group animated-search">
+              <input type="search" class="form-control" placeholder="Поиск" aria-label="Поиск" />
+              <button class="btn btn-yellow btn-custom" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+          <!-- Корзина -->
+          <button class="btn btn-yellow btn-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+            <i class="bi bi-cart2 me-1"></i> 0 товаров — 0 руб.
+          </button>
+        </div>
+      </nav>
+      <hr />
+    </div>
+  
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartOffcanvasLabel">Ваша корзина</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="cart-item d-flex justify-content-between align-items-center mb-2">
+          <span>Печатающая техника</span>
+          <span>1 шт. — 1000 руб.</span>
+        </div>
+        <div class="cart-item d-flex justify-content-between align-items-center mb-2">
+          <span>Ноутбук</span>
+          <span>1 шт. — 1200 руб.</span>
+        </div>
+        <div class="cart-item d-flex justify-content-between align-items-center mb-2">
+          <span>Монитор</span>
+          <span>1 шт. — 200 руб.</span>
+        </div>
+        <hr>
+        <div class="cart-total d-flex justify-content-between align-items-center">
+          <strong>Итого:</strong>
+          <strong>2400 руб.</strong>
+        </div>
+        <button class="btn btn-yellow btn-custom w-100 mt-3" type="button">Оформить заказ</button>
+      </div>
+    </div>
+
+    <!-- Структура каталога -->
+    <div class="container">
+      <nav aria-label="breadcrumb" class="my-3">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/" class="text-decoration-none text-reset">Главная</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/catalog/" class="text-decoration-none text-reset">Каталог запчастей</a>
+          </li>
+          <li class="breadcrumb-item active text-warning" aria-current="page">
+            Запасные части
+          </li>
+        </ol>
+      </nav>
+  </div>
+
+<!-- Каталог-->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="image1.jpg" class="card-img-top" alt="Ламинаторы">
+          <div class="card-body text-center">
+            <h5 class="card-title">Ламинаторы</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="image2.jpg" class="card-img-top" alt="МФУ Лазерные">
+          <div class="card-body text-center">
+            <h5 class="card-title">МФУ Лазерные</h5>
+          </div>
+        </div>      
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="image3.jpg" class="card-img-top" alt="Освещение для офиса">
+          <div class="card-body text-center">
+            <h5 class="card-title">Освещение для офиса</h5>
+          </div>
+        </div>      
+      </div>
+    </div>
+    <!-- Вторая строка каталога -->
+    <div class="row">
+      <div class="col-md-4 mb-4">
+         <div class="card">
+           <img src="image4.jpg" class="card-img-top" alt="Переплетчики (Брошюровщики)">
+           <div class="card-body text-center">
+             <h5 class="card-title">Переплетчики (Брошюровщики)</h5>
+           </div>
+         </div>
+      </div>
+      <div class="col-md-4 mb-4">
+         <div class="card">
+           <img src="image5.jpg" class="card-img-top" alt="Принтеры лазерные">
+           <div class="card-body text-center">
+             <h5 class="card-title">Принтеры лазерные</h5>
+           </div>
+         </div>
+      </div>
+      <div class="col-md-4 mb-4">
+         <div class="card">
+           <img src="image6.jpg" class="card-img-top" alt="Принтеры струйные">
+           <div class="card-body text-center">
+             <h5 class="card-title">Принтеры струйные</h5>
+           </div>
+         </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Футер -->
+    <footer class="footer-custom text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 mb-4">
+            <h5 class="fw-bold">О компании</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="footer-link">О нас</a></li>
+              <li><a href="#" class="footer-link">Контакты</a></li>
+              <li><a href="#" class="footer-link">Политика конфиденциальности</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h5 class="fw-bold">Услуги</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="footer-link">Ремонт офисной техники</a></li>
+              <li><a href="#" class="footer-link">Видеонаблюдение</a></li>
+              <li><a href="#" class="footer-link">Кабельные сети</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h5 class="fw-bold">Мы в соцсетях</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="footer-link">Вконтакте</a></li>
+              <li><a href="#" class="footer-link">Instagram</a></li>
+              <li><a href="#" class="footer-link">Telegram</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h5 class="fw-bold">Подписка на новости</h5>
+            <form>
+              <div class="input-group">
+                <input type="email" class="form-control" placeholder="Ваш e-mail">
+                <button class="btn btn-yellow" type="submit">
+                  <i class="bi bi-envelope-fill"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="text-center mt-4 small text-muted">
+          <a class="text-copyright">© 2025 Офисная Техника. Все права защищены.</a>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

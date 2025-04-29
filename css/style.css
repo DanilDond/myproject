@@ -1,0 +1,447 @@
+:root {
+  --yellow: #FFE100;
+  --orange: #FFD600;
+  --border-light: #ddd;
+  --bg-light: #FAFAFA;
+  --bg-white: #fff;
+  --text-default: #333;
+}
+
+body {
+  margin: 0;
+}
+
+.rounded-custom {
+  border-radius: 8px;
+}
+
+/* ---------- Header Styles ---------- */
+.top-header,
+.fixed-header {
+  background-color: var(--bg-light);
+}
+.fixed-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.fixed-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+.fixed-header hr {
+  margin: 0;
+}
+
+/* ---------- Unified Button Style ---------- */
+.btn-custom {
+  background-color: var(--yellow) !important;
+  color: #000 !important;
+  border-color: var(--yellow) !important;
+}
+.btn-custom:hover {
+  background-color: #e6cc00 !important;
+  color: #000 !important;
+}
+
+/* ---------- Unified Dropdown Style ---------- */
+/* Применяется для всех dropdown, если добавлен класс .unified-dropdown */
+.unified-dropdown {
+  border: 1px solid #ddd;
+  background-color: var(--bg-white);
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  z-index: 1500;
+}
+.unified-dropdown .dropdown-item {
+  padding: 0.125rem 0.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.unified-dropdown .dropdown-item:hover,
+.unified-dropdown .dropdown-item:focus {
+  background-color: #f0f0f0;
+  color: #FFD600;
+  border-radius: 0.25rem;
+}
+
+/* ---------- Login Dropdown (с дополнительными настройками) ---------- */
+
+.login-dropdown {
+  width: 350px !important; 
+  padding: 30px; 
+}
+
+.dropdown-menu {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  padding: 20px;
+  z-index: 1500;
+}
+.dropdown-toggle::after {
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+.dropdown-menu form {
+  padding: 0;
+}
+.form-control {
+  border-radius: 5px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+}
+.form-control:focus {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 0.25rem rgba(255,225,0,0.25);
+}
+.btn-custom.w-100 {
+  padding: 8px;
+}
+.dropdown-item {
+  padding: 8px 0;
+}
+
+/* ---------- Checkbox ---------- */
+.form-check-input {
+  width: 1.2em;
+  height: 1.2em;
+  margin-top: 0.1em;
+  border: 2px solid #adb5bd;
+  cursor: pointer;
+}
+.form-check-input:hover,
+.form-check-input:focus {
+  border-color: var(--yellow);
+}
+.form-check-input:checked {
+  background-color: var(--yellow);
+  border-color: var(--yellow);
+}
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255,225,0,0.25);
+}
+.form-check-label {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ---------- Services Dropdown ---------- */
+.services-menu {
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-white);
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+}
+.services-menu .dropdown-item {
+  transition: background-color 0.2s, color 0.2s;
+  padding: 0.125rem 0.5rem;
+}
+.services-menu .dropdown-item:hover,
+.services-menu .dropdown-item:focus {
+  background-color: #f0f0f0;
+  color: var(--orange);
+  border-radius: 0.25rem;
+}
+
+/* ---------- Catalog Dropdown ---------- */
+.catalog-dropdown-container {
+  display: flex;
+  width: 700px;
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-white);
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+/* Левая колонка */
+.catalog-menu-main {
+  flex: 1;
+  padding: 0.5rem;
+  border-right: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.catalog-menu__root-item {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.catalog-menu__root-item.active,
+.catalog-menu__root-item:hover,
+.catalog-menu__root-item:focus {
+  background-color: #f0f0f0;
+}
+.catalog-menu__link-wrapper {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-default);
+}
+.catalog-menu__icon {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+.catalog-menu__title {
+  font-size: 14px;
+  transition: color 0.2s;
+}
+.catalog-menu__root-item.active .catalog-menu__title,
+.catalog-menu__root-item:hover .catalog-menu__title,
+.catalog-menu__root-item:focus .catalog-menu__title,
+.catalog-menu__root-item.active .catalog-menu__icon,
+.catalog-menu__root-item:hover .catalog-menu__icon,
+.catalog-menu__root-item:focus .catalog-menu__icon {
+  color: var(--orange);
+}
+/* Правая колонка */
+.catalog-menu-submenu {
+  flex: 1;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background-color: #f8f8f8;
+  position: relative;
+}
+.catalog-menu__submenu-item {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s, color 0.2s;
+  position: relative;
+}
+.catalog-menu__submenu-item a {
+  text-decoration: none;
+  color: var(--text-default);
+  display: block;
+}
+.catalog-menu__submenu-item:hover,
+.catalog-menu__submenu-item:focus {
+  background-color: #e0e0e0;
+}
+.catalog-menu__submenu-item:hover a,
+.catalog-menu__submenu-item:focus a {
+  color: var(--orange);
+}
+/* Вложенное подменю (третий уровень) */
+.catalog-menu__submenu-item[data-has-submenu] {
+  position: relative;
+}
+.catalog-menu__nested-submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #f8f8f8;
+  border: 1px solid var(--border-light);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  display: none;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1100;
+}
+.catalog-menu__submenu-item[data-has-submenu]:hover .catalog-menu__nested-submenu {
+  display: block;
+}
+.catalog-menu__nested-submenu-item a {
+  display: block;
+  padding: 0.4rem;
+  text-decoration: none;
+  color: var(--text-default);
+  transition: background-color 0.2s, color 0.2s;
+}
+.catalog-menu__nested-submenu-item a:hover,
+.catalog-menu__nested-submenu-item a:focus {
+  background-color: #e0e0e0;
+  color: var(--orange);
+  border-radius: 0.25rem;
+}
+
+/* ---------- Animated Search ---------- */
+.animated-search .form-control {
+  background-color: var(--bg-white);
+  border: 1px solid #adb5bd;
+  color: #000;
+}
+.animated-search .form-control::placeholder {
+  color: #666;
+}
+.animated-search .form-control:focus {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 0.2rem rgba(255,225,0,0.25);
+  outline: none;
+}
+.animated-search .btn {
+  background-color: var(--yellow);
+  border: 1px solid #adb5bd;
+  color: #000;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.animated-search .btn:hover {
+  background-color: var(--orange);
+  border-color: var(--orange);
+}
+
+/* ---------- Cart Styles ---------- */
+.cart-item {
+  padding: 10px 0;
+}
+.cart-total {
+  font-size: 1.1rem;
+  padding-top: 10px;
+}
+.offcanvas-header h5 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* ---------- Carousel ---------- */
+.carousel-indicators [data-bs-target] {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 6px;
+  transition: all 0.3s ease;
+}
+.carousel-indicators .active {
+  background-color: var(--orange);
+  transform: scale(1.1);
+}
+.catalog-card {
+  min-height: 80vh;
+}
+.catalog-item {
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+.catalog-item:hover {
+  background-color: var(--yellow) !important;
+  transform: translateX(3px);
+}
+.carousel-control-prev {
+  left: -25px;
+}
+.carousel-control-next {
+  right: -25px;
+}
+.custom-carousel {
+  height: 70vh;
+}
+.custom-carousel .carousel-inner,
+.custom-carousel .carousel-item,
+.custom-carousel img {
+  height: 100%;
+}
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* ---------- Services Section ---------- */
+.service-icon {
+  font-size: 2.5rem;
+  color: #1A1A1A;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.service-card:hover .service-icon {
+  color: var(--yellow);
+  transform: scale(1.1);
+}
+
+/* ---------- Banner / Products ---------- */
+.card-body p {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.banner-box {
+  min-height: 140px;
+  height: 100%;
+}
+.card img {
+  max-height: 130px;
+  object-fit: contain;
+}
+.card-title {
+  min-height: 36px;
+}
+.card img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+}
+
+/* ---------- News ---------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* общий контейнер карточки */
+.news-card {
+  /* вместо h-100: автоматически подстраивается по содержимому */
+  animation: fadeInUp 0.8s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* задаём максимальную высоту, чтобы карточки были чуть ниже */
+  max-height: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* hover-эффект */
+.news-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+/* тело карточки растягивается, но не превышает */
+.news-card .card-body {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+
+
+
+/* ---------- Footer ---------- */
+.footer-custom {
+  background-color: #1A1A1A;
+  color: #fff;
+}
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.footer-link:hover {
+  color: #fff;
+}
+
+/* КАТАЛОГ */
+
