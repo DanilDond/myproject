@@ -217,7 +217,7 @@
             <a href="/" class="text-decoration-none text-reset">Главная</a>
           </li>
           <li class="breadcrumb-item">
-            <a href="/catalog/" class="text-decoration-none text-reset">Каталог запчастей</a>
+            <a href="/catalog.html" class="text-decoration-none text-reset">Каталог</a>
           </li>
           <li class="breadcrumb-item active text-warning" aria-current="page">
             Запасные части
@@ -226,63 +226,229 @@
       </nav>
   </div>
 
-<!-- Каталог-->
-  <div class="container my-5">
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="image1.jpg" class="card-img-top" alt="Ламинаторы">
+<!-- Каталог
+<main>
+  <div class="container py-4">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="img/zip.webp" class="card-img-top" alt="Запасные части">
           <div class="card-body text-center">
-            <h5 class="card-title">Ламинаторы</h5>
+            <h5 class="card-title">Запасные части</h5>
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="image2.jpg" class="card-img-top" alt="МФУ Лазерные">
-          <div class="card-body text-center">
-            <h5 class="card-title">МФУ Лазерные</h5>
-          </div>
-        </div>      
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="image3.jpg" class="card-img-top" alt="Освещение для офиса">
-          <div class="card-body text-center">
-            <h5 class="card-title">Освещение для офиса</h5>
-          </div>
-        </div>      
-      </div>
-    </div>
-    <!-- Вторая строка каталога -->
-    <div class="row">
-      <div class="col-md-4 mb-4">
-         <div class="card">
-           <img src="image4.jpg" class="card-img-top" alt="Переплетчики (Брошюровщики)">
-           <div class="card-body text-center">
-             <h5 class="card-title">Переплетчики (Брошюровщики)</h5>
-           </div>
-         </div>
-      </div>
-      <div class="col-md-4 mb-4">
-         <div class="card">
-           <img src="image5.jpg" class="card-img-top" alt="Принтеры лазерные">
-           <div class="card-body text-center">
-             <h5 class="card-title">Принтеры лазерные</h5>
-           </div>
-         </div>
-      </div>
-      <div class="col-md-4 mb-4">
-         <div class="card">
-           <img src="image6.jpg" class="card-img-top" alt="Принтеры струйные">
-           <div class="card-body text-center">
-             <h5 class="card-title">Принтеры струйные</h5>
-           </div>
-         </div>
-      </div>
-    </div>
-  </div>
 
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/power_supplies.jpg" class="card-img-top" alt="Источники питания">
+          <div class="card-body text-center">
+            <h5 class="card-title">Источники питания</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/laminators.jpg" class="card-img-top" alt="Радиодетали">
+          <div class="card-body text-center">
+            <h5 class="card-title">Радиодетали</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/cartridges.jpg" class="card-img-top" alt="Инструменты">
+          <div class="card-body text-center">
+            <h5 class="card-title">Инструменты</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/laser_printers.jpg" class="card-img-top" alt="Химия">
+          <div class="card-body text-center">
+            <h5 class="card-title">Химия</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/inkjet_printers.jpg" class="card-img-top" alt="Расходные материалы">
+          <div class="card-body text-center">
+            <h5 class="card-title">Расходные материалы</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/inkjet_printers.jpg" class="card-img-top" alt="Кабели и переходники">
+          <div class="card-body text-center">
+            <h5 class="card-title">Кабели и переходники</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/inkjet_printers.jpg" class="card-img-top" alt="Прочее">
+          <div class="card-body text-center">
+            <h5 class="card-title">Прочее</h5>
+          </div>
+        </div>
+      </div>
+    </main>  -->
+
+         <!--gfg
+    <main>
+      <div class="container py-4">
+        <div class="row">
+          <aside class="col-md-3">
+            <div class="p-3 bg-light border rounded">
+              <h5 class="mb-3">Фильтры</h5>
+              <form id="filter-form">
+                <div class="mb-3">
+                  <label for="availability" class="form-label">Наличие</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="availability" value="inStock">
+                    <label class="form-check-label" for="availability">В наличии</label>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="article" class="form-label">Артикул</label>
+                  <input type="text" class="form-control" id="article" placeholder="Введите артикул">
+                </div>
+                <div class="mb-3">
+                  <label for="brand" class="form-label">Бренд</label>
+                  <select class="form-select" id="brand">
+                    <option value="" selected>Все</option>
+                    <option value="brand1">Бренд 1</option>
+                    <option value="brand2">Бренд 2</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-custom w-100">Применить</button>
+              </form>
+            </div>
+          </aside>
+   -->
+          <!-- Выбор категорий -->
+          <main>
+            <div class="container py-4">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                
+                <!-- Категория 1: Запасные части -->
+                <div class="col">
+                  <div class="card h-100 d-flex flex-column position-relative" style="height:350px;">
+                    <div class="overflow-hidden p-4" style="height:245px;">
+                      <img src="img/zip.webp" class="card-img-top w-100" alt="Запасные части" style="height:100%; object-fit: cover; transition: transform 0.3s ease;">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-end align-items-center p-1" style="height:105px;">
+                      <h5 class="card-title m-0">Запасные части</h5>
+                      <!-- Стretched link для кликабельности карточки -->
+                      <a href="category/zip.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Категория 2: Источники питания -->
+                <div class="col">
+                  <div class="card h-100 d-flex flex-column position-relative" style="height:350px;">
+                    <div class="overflow-hidden p-4" style="height:265px;">
+                      <img src="img/ibp.webp" class="card-img-top w-100" alt="Источники питания" style="height:100%; object-fit: cover; transition: transform 0.3s ease;">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-end align-items-center p-1" style="height:105px;">
+                      <h5 class="card-title m-0">Источники питания</h5>
+                      <a href="category/power.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Категория 3: Радиодетали -->
+                <div class="col">
+                  <div class="card h-100 d-flex flex-column position-relative" style="height:350px;">
+                    <div class="overflow-hidden p-4" style="height:245px;">
+                      <img src="img/radio.webp" class="card-img-top w-100" alt="Радиодетали" style="height:100%; object-fit: cover; transition: transform 0.3s ease;">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-end align-items-center p-1" style="height:105px;">
+                      <h5 class="card-title m-0">Радиодетали</h5>
+                      <a href="category/radio.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Категория 4: Инструменты -->
+                <div class="col">
+                  <div class="card h-100 d-flex flex-column position-relative" style="height:350px;">
+                    <div class="overflow-hidden p-4" style="height:245px;">
+                      <img src="img/instruments.webp" class="card-img-top w-100" alt="Инструменты" style="height:100%; object-fit: cover; transition: transform 0.3s ease;">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-end align-items-center p-1" style="height:105px;">
+                      <h5 class="card-title m-0">Инструменты</h5>
+                      <a href="category/instrument.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Категория 5: Химия -->
+                <div class="col">
+                  <div class="card h-100 d-flex flex-column position-relative" style="height:350px;">
+                    <div class="overflow-hidden p-4" style="height:245px;">
+                      <img src="img/chemistry.webp" class="card-img-top w-100" alt="Химия" style="height:100%; object-fit: cover; transition: transform 0.3s ease;">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-end align-items-center p-1" style="height:105px;">
+                      <h5 class="card-title m-0">Химия</h5>
+                      <a href="category/chemistry.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Категория 6: Расходные материалы -->
+                <div class="col">
+                  <div class="card h-100 d-flex flex-column position-relative" style="height:350px;">
+                    <div class="overflow-hidden p-4" style="height:245px;">
+                      <img src="img/consumable.webp" class="card-img-top w-100" alt="Расходные материалы" style="height:100%; object-fit: cover; transition: transform 0.3s ease;">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-end align-items-center p-1" style="height:105px;">
+                      <h5 class="card-title m-0">Расходные материалы</h5>
+                      <a href="category/consumable.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Категория 7: Кабели и переходники -->
+                <div class="col">
+                  <div class="card h-100 d-flex flex-column position-relative" style="height:350px;">
+                    <div class="overflow-hidden p-4" style="height:245px;">
+                      <img src="img/cables.webp" class="card-img-top w-100" alt="Кабели и переходники" style="height:100%; object-fit: cover; transition: transform 0.3s ease;">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-end align-items-center p-1" style="height:105px;">
+                      <h5 class="card-title m-0">Кабели и переходники</h5>
+                      <a href="category/cables.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Категория 8: Прочее -->
+                <div class="col">
+                  <div class="card h-100 d-flex flex-column position-relative" style="height:350px;">
+                    <div class="overflow-hidden p-4" style="height:245px;">
+                      <img src="img/other.webp" class="card-img-top w-100" alt="Прочее" style="height:100%; object-fit: cover; transition: transform 0.3s ease;">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-end align-items-center p-1" style="height:105px;">
+                      <h5 class="card-title m-0">Прочее</h5>
+                      <a href="category/other.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </main>
 
     <!-- Футер -->
     <footer class="footer-custom text-white py-5">
@@ -317,7 +483,7 @@
             <form>
               <div class="input-group">
                 <input type="email" class="form-control" placeholder="Ваш e-mail">
-                <button class="btn btn-yellow" type="submit">
+                <button class="btn btn-yellow btn-custom" type="submit">
                   <i class="bi bi-envelope-fill"></i>
                 </button>
               </div>

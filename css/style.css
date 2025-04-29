@@ -369,6 +369,10 @@ body {
 }
 
 /* ---------- Banner / Products ---------- */
+.card {
+  min-height: 320px;
+}
+
 .card-body p {
   font-weight: 500;
   font-size: 1.1rem;
@@ -377,17 +381,22 @@ body {
   min-height: 140px;
   height: 100%;
 }
-.card img {
-  max-height: 130px;
-  object-fit: contain;
-}
+
 .card-title {
   min-height: 36px;
 }
-.card img {
-  width: 100%;
-  height: 130px;
-  object-fit: contain;
+
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Сдвигаем текст карточки немного вниз */
+.card-title {
+  margin-top: 1rem; /* можно отрегулировать, чтобы текст был ниже */
 }
 
 /* ---------- News ---------- */
@@ -442,6 +451,4 @@ body {
 .footer-link:hover {
   color: #fff;
 }
-
-/* КАТАЛОГ */
 
