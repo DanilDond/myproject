@@ -453,7 +453,6 @@ body {
 }
 
 /* Общие стили для карточек */
-/* Общие стили для карточек */
 .card-custom {
   display: flex;
   flex-direction: column;
@@ -464,10 +463,9 @@ body {
   overflow: hidden;
 }
 
-/* Обертка для изображения с aspect-ratio */
 .image-container {
   width: 100%;
-  aspect-ratio: 16 / 9; /* Подбери нужное соотношение сторон */
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   position: relative;
 }
@@ -479,8 +477,28 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Стили для текстовой области карточки */
 .card-body-custom {
   padding: 0.5rem;
   text-align: center;
+}
+.filters .btn-dropdown {
+  background-color: var(--yellow) !important;
+  color: #000 !important;
+  border-color: var(--yellow) !important;
+}
+
+.filters .btn-dropdown:hover {
+  background-color: #e6cc00 !important;
+  color: #000 !important;
+  border-color: #e6cc00 !important;
+}
+
+.filters .btn-dropdown {
+  background-color: #FFFFFF; 
+  border: 1px solid #ced4da;
+  color: #212529;
+}
+.filters .btn-dropdown:focus,
+.filters .btn-dropdown:hover {
+  background-color: #f8f9fa;
 }

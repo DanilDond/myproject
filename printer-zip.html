@@ -219,48 +219,120 @@
           <li class="breadcrumb-item">
             <a href="/catalog.html" class="text-decoration-none text-reset">Каталог</a>
           </li>
-          <li class="breadcrumb-item active text-warning" aria-current="page">
+          <li class="breadcrumb-item">
             <a href="/catalog.html" class="text-decoration-none text-reset">Запасные части</a>
+          </li>
+          <li class="breadcrumb-item active text-warning" aria-current="page">
+            <a href="/catalog.html" class="text-decoration-none text-reset">Печатающая техника</a>
           </li>
         </ol>
       </nav>
   </div>
 
   <!-- Фильтр -->
- <main>
-      <div class="container py-4">
-        <div class="row">
-          <aside class="col-md-3">
-            <div class="p-3 bg-light border rounded">
-              <h5 class="mb-3">Фильтры</h5>
-              <form id="filter-form">
-                <div class="mb-3">
-                  <label for="availability" class="form-label">Наличие</label>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="availability" value="inStock">
-                    <label class="form-check-label" for="availability">В наличии</label>
-                  </div>
+  <main>
+    <div class="container py-4">
+      <div class="row">
+        <aside class="col-md-3">
+          <!-- Оборачиваем фильтры классом filters -->
+          <div class="p-3 bg-light border rounded filters">
+            <h5 class="mb-3">Фильтры</h5>
+            <form id="filter-form">
+              <!-- Наличие -->
+              <div class="mb-3">
+                <label for="availability" class="form-label">Наличие</label>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="availability"
+                    value="inStock"
+                  />
+                  <label class="form-check-label" for="availability">В наличии</label>
                 </div>
-                <div class="mb-3">
-                  <label for="article" class="form-label">Артикул</label>
-                  <input type="text" class="form-control" id="article" placeholder="Введите артикул">
+              </div>
+              <!-- Артикул -->
+              <div class="mb-3">
+                <label for="article" class="form-label">Артикул</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="article"
+                  placeholder="Введите артикул"
+                />
+              </div>
+              <!-- Бренд -->
+              <div class="mb-3">
+                <label for="brand" class="form-label">Бренд</label>
+                <select class="form-select" id="brand">
+                  <option value="" selected>Все</option>
+                  <option value="HP">HP</option>
+                  <option value="Kyocera">Kyocera</option>
+                  <option value="Brother">Brother</option>
+                  <option value="Canon">Canon</option>
+                  <option value="Samsung">Samsung</option>
+                </select>
+              </div>
+              <!-- Производитель -->
+              <div class="mb-3">
+                <label for="manufacturer" class="form-label">Производитель</label>
+                <select class="form-select" id="manufacturer">
+                  <option value="" selected>Все</option>
+                  <option value="Manufacturer1">Original</option>
+                  <option value="Manufacturer2">OEM</option>
+                </select>
+              </div>
+
+<!-- Поддерживаемые модели (Dropdown с чекбоксами, unified-style) -->
+<div class="mb-3">
+    <label class="form-label">Поддерживаемые модели</label>
+    <div class="dropdown">
+      <button type="button" class="btn btn-outline-secondary w-100 text-start" id="dropdownModels" data-bs-toggle="dropdown" aria-expanded="false">
+        Выберите модели
+      </button>
+      <div class="dropdown-menu p-2 unified-dropdown" style="width: 100%; max-height: 300px; overflow-y: auto;" aria-labelledby="dropdownModels">
+        <!-- Поиск -->
+        <input type="text" class="form-control mb-2" id="modelSearch" placeholder="Поиск модели...">
+  
+        <!-- Список моделей -->
+        <div id="modelList">
+          <!-- Генерируемый JS кодом список -->
+        </div>
+  
+        <hr class="my-2">
+        <div class="d-flex justify-content-between">
+          <button type="button" class="btn btn-sm btn-outline-secondary" id="clearModels">Сбросить</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary" id="toggleModels">Показать все</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+              <!-- Состояние -->
+              <div class="mb-3">
+                <label for="condition_usage" class="form-label">Состояние</label>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="condition_usage"
+                    value="used"
+                  />
+                  <label class="form-check-label" for="condition_usage">Б/У</label>
                 </div>
-                <div class="mb-3">
-                  <label for="brand" class="form-label">Бренд</label>
-                  <select class="form-select" id="brand">
-                    <option value="" selected>Все</option>
-                    <option value="HP">HP</option>
-                    <option value="Kyocera">Kyocera</option>
-                    <option value="Brother">Brother</option>
-                    <option value="Canon">Canon</option>
-                    <option value="Samsung">Samsung</option>
-                    <option value="Samsung">Samsung</option>
-                  </select>
-                </div>
-                <button type="submit" class="btn btn-custom w-100">Применить</button>
-              </form>
-            </div>
-          </aside>
+              </div>
+              <!-- Кнопка применения фильтра -->
+              <button type="submit" class="btn btn-custom w-100">Применить</button>
+            </form>
+          </div>
+        </aside>
+        <!-- Остальная часть страницы -->
+      </div>
+    </div>
+  </main>
+  
+  
+  
 
           
 
