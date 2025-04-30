@@ -216,173 +216,54 @@
           <li class="breadcrumb-item">
             <a href="/" class="text-decoration-none text-reset">Главная</a>
           </li>
-          <li class="breadcrumb-item active text-warning" aria-current="page">
+          <li class="breadcrumb-item">
             <a href="/catalog.html" class="text-decoration-none text-reset">Каталог</a>
+          </li>
+          <li class="breadcrumb-item active text-warning" aria-current="page">
+            <a href="/catalog.html" class="text-decoration-none text-reset">Запасные части</a>
           </li>
         </ol>
       </nav>
   </div>
-          <!-- Выбор категорий -->
-          <main>
-            <div class="container py-4">
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-                
-                <!-- Категория 1: Запасные части -->
-                <div class="col">
-                  <div class="card card-custom position-relative">
-                    <div class="image-container">
-                      <img src="img/zip.webp" class="card-img-top" alt="Запасные части">
-                    </div>
-                    <div class="card-body card-body-custom d-flex flex-column justify-content-end align-items-center">
-                      <h5 class="card-title m-0">Запасные части</h5>
-                      <a href="/zip.html" class="stretched-link"></a>
-                    </div>
+
+  <!-- Фильтр -->
+ <main>
+      <div class="container py-4">
+        <div class="row">
+          <aside class="col-md-3">
+            <div class="p-3 bg-light border rounded">
+              <h5 class="mb-3">Фильтры</h5>
+              <form id="filter-form">
+                <div class="mb-3">
+                  <label for="availability" class="form-label">Наличие</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="availability" value="inStock">
+                    <label class="form-check-label" for="availability">В наличии</label>
                   </div>
                 </div>
-                
-                <!-- Категория 2: Источники питания -->
-                <div class="col">
-                  <div class="card card-custom position-relative">
-                    <div class="image-container">
-                      <img src="img/ibp.webp" class="card-img-top" alt="Источники питания">
-                    </div>
-                    <div class="card-body card-body-custom d-flex flex-column justify-content-end align-items-center">
-                      <h5 class="card-title m-0">Источники питания</h5>
-                      <a href="category/power.html" class="stretched-link"></a>
-                    </div>
-                  </div>
+                <div class="mb-3">
+                  <label for="article" class="form-label">Артикул</label>
+                  <input type="text" class="form-control" id="article" placeholder="Введите артикул">
                 </div>
-                
-                <!-- Категория 3: Радиодетали -->
-                <div class="col">
-                  <div class="card card-custom position-relative">
-                    <div class="image-container">
-                      <img src="img/radio.webp" class="card-img-top" alt="Радиодетали">
-                    </div>
-                    <div class="card-body card-body-custom d-flex flex-column justify-content-end align-items-center">
-                      <h5 class="card-title m-0">Радиодетали</h5>
-                      <a href="category/radio.html" class="stretched-link"></a>
-                    </div>
-                  </div>
+                <div class="mb-3">
+                  <label for="brand" class="form-label">Бренд</label>
+                  <select class="form-select" id="brand">
+                    <option value="" selected>Все</option>
+                    <option value="HP">HP</option>
+                    <option value="Kyocera">Kyocera</option>
+                    <option value="Brother">Brother</option>
+                    <option value="Canon">Canon</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="Samsung">Samsung</option>
+                  </select>
                 </div>
-                
-                <!-- Категория 4: Инструменты -->
-                <div class="col">
-                  <div class="card card-custom position-relative">
-                    <div class="image-container">
-                      <img src="img/instruments.webp" class="card-img-top" alt="Инструменты">
-                    </div>
-                    <div class="card-body card-body-custom d-flex flex-column justify-content-end align-items-center">
-                      <h5 class="card-title m-0">Инструменты</h5>
-                      <a href="category/instrument.html" class="stretched-link"></a>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Категория 5: Химия -->
-                <div class="col">
-                  <div class="card card-custom position-relative">
-                    <div class="image-container">
-                      <img src="img/chemistry.webp" class="card-img-top" alt="Химия">
-                    </div>
-                    <div class="card-body card-body-custom d-flex flex-column justify-content-end align-items-center">
-                      <h5 class="card-title m-0">Химия</h5>
-                      <a href="category/chemistry.html" class="stretched-link"></a>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Категория 6: Расходные материалы -->
-                <div class="col">
-                  <div class="card card-custom position-relative">
-                    <div class="image-container">
-                      <img src="img/consumable.webp" class="card-img-top" alt="Расходные материалы">
-                    </div>
-                    <div class="card-body card-body-custom d-flex flex-column justify-content-end align-items-center">
-                      <h5 class="card-title m-0">Расходные материалы</h5>
-                      <a href="category/consumable.html" class="stretched-link"></a>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Категория 7: Кабели и переходники -->
-                <div class="col">
-                  <div class="card card-custom position-relative">
-                    <div class="image-container">
-                      <img src="img/cables.webp" class="card-img-top" alt="Кабели и переходники">
-                    </div>
-                    <div class="card-body card-body-custom d-flex flex-column justify-content-end align-items-center">
-                      <h5 class="card-title m-0">Кабели и переходники</h5>
-                      <a href="category/cables.html" class="stretched-link"></a>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Категория 8: Прочее -->
-                <div class="col">
-                  <div class="card card-custom position-relative">
-                    <div class="image-container">
-                      <img src="img/other.webp" class="card-img-top" alt="Прочее">
-                    </div>
-                    <div class="card-body card-body-custom d-flex flex-column justify-content-end align-items-center">
-                      <h5 class="card-title m-0">Прочее</h5>
-                      <a href="category/other.html" class="stretched-link"></a>
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
+                <button type="submit" class="btn btn-custom w-100">Применить</button>
+              </form>
             </div>
-          </main>
+          </aside>
+
           
 
-    <!-- Футер -->
-    <footer class="footer-custom text-white py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 mb-4">
-            <h5 class="fw-bold">О компании</h5>
-            <ul class="list-unstyled">
-              <li><a href="#" class="footer-link">О нас</a></li>
-              <li><a href="#" class="footer-link">Контакты</a></li>
-              <li><a href="#" class="footer-link">Политика конфиденциальности</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 mb-4">
-            <h5 class="fw-bold">Услуги</h5>
-            <ul class="list-unstyled">
-              <li><a href="#" class="footer-link">Ремонт офисной техники</a></li>
-              <li><a href="#" class="footer-link">Видеонаблюдение</a></li>
-              <li><a href="#" class="footer-link">Кабельные сети</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 mb-4">
-            <h5 class="fw-bold">Мы в соцсетях</h5>
-            <ul class="list-unstyled">
-              <li><a href="#" class="footer-link">Вконтакте</a></li>
-              <li><a href="#" class="footer-link">Instagram</a></li>
-              <li><a href="#" class="footer-link">Telegram</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 mb-4">
-            <h5 class="fw-bold">Подписка на новости</h5>
-            <form>
-              <div class="input-group">
-                <input type="email" class="form-control" placeholder="Ваш e-mail">
-                <button class="btn btn-yellow btn-custom" type="submit">
-                  <i class="bi bi-envelope-fill"></i>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="text-center mt-4 small text-muted">
-          <a class="text-copyright">© 2025 Офисная Техника. Все права защищены.</a>
-        </div>
-      </div>
-    </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts/script.js"></script>
-  </body>
-</html>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="scripts/script.js"></script>
+        </body>
